@@ -1,0 +1,41 @@
+/* 
+    Hoja de estilos para la introducción a CSS.
+    Se aplica a un archivo HTML que demuestra cómo CSS controla la presentación visual de los elementos.
+*/
+
+/* Estilo para todo el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif;  /* Fuente legible y moderna (Arial es la primera opción de fuente, Si el navegador no encuentra Arial instalada en el sistema del usuario, entonces intenta usar sans serif, la cual es una familia genérica)*/ 
+    background-color: #f4f4f4;     /* Color de fondo suave */
+    color: #333;                   /* Color de texto principal */
+    line-height: 1.6;                /* Espaciado entre líneas */
+    padding: 20px;                   /* se refiere al espacio interior entre el contenido de un elemento y su borde.*/
+}
+
+/* Estilo para el encabezado principal */
+h1 {
+    color: steelblue;              /* Color azul moderno */
+    text-align: center;              /* Centrado del texto */
+}
+
+/* Estilo para párrafos */
+p {
+    margin-bottom: 15px;             /* Separación inferior */
+}
+
+/* Estilo para una clase específica que demuestra uso de clases */
+.highlight {
+    background-color: yellow;      /* Fondo llamativo */
+    font-weight: bold;               /* Negrita */
+}
+
+/* Estilo para un id específico */
+#principal {
+    color: darkgreen;              /* Texto verde oscuro */
+    font-size: 1.2em;                /* Tamaño relativo */
+}
+
+/* Comentario extra: 
+   Los estilos aquí aplican directamente a etiquetas HTML desde el HTML externo enlazado. 
+   Si el navegador encuentra una propiedad desconocida, simplemente la ignorará.
+*/
