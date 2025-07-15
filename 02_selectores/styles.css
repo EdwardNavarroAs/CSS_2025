@@ -87,3 +87,33 @@ h3 + p {
 div ~ p {
     color: crimson;
 }
+
+
+/* 
+    ===================================
+    6. Anidamiento de reglas (CSS moderno)
+    ===================================
+
+    ✅ Esta sintaxis es válida en navegadores modernos.
+    ✅ Permite escribir reglas anidadas que serán "expandibles".
+    ✅ Similar a la forma en que se hace en preprocesadores como Sass.
+*/
+
+h3 {
+    & ~ p {
+        /* Esto se interpreta como: h3 ~ p */
+        background-color: #333;
+        color: white;
+        font-weight: bold;
+        padding: 0.5em;
+    }
+}
+
+/* También puedes usar anidamiento con descendencia */
+article {
+    & div {
+        /* Se interpreta como: article div */
+        color: purple;
+        font-style: italic;
+    }
+}

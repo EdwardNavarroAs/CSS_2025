@@ -1,0 +1,98 @@
+/* 
+    Archivo: styles.css
+
+    Este archivo contiene ejemplos de pseudoclases y pseudoelementos.
+
+    ========================
+    🔵 PSEUDOCLASES EN CSS
+    ========================
+
+    Las pseudoclases comienzan con ":" y permiten aplicar estilos según el estado de un elemento.
+
+    📌 Interacción:
+    :hover       → Cuando el mouse pasa por encima del elemento
+    :focus       → Cuando el elemento recibe foco (por ejemplo, input activo)
+    :active      → Mientras el elemento está siendo activado (por ejemplo, clic)
+    :visited     → Enlaces que ya han sido visitados
+    :link        → Enlaces que aún no han sido visitados
+
+    📌 Posición estructural:
+    :first-child     → Primer hijo dentro de su contenedor
+    :last-child      → Último hijo dentro de su contenedor
+    :nth-child(n)    → El enésimo hijo (por número, fórmula o palabra clave)
+    :nth-of-type(n)  → El enésimo hijo del mismo tipo (por ejemplo, el tercer <p>)
+    :only-child      → Si es el único hijo
+
+    📌 Estado de formularios:
+    :checked     → Para inputs tipo checkbox o radio seleccionados
+    :disabled    → Elementos de formulario deshabilitados
+    :enabled     → Elementos habilitados
+    :required    → Campos obligatorios
+    :optional    → Campos no obligatorios
+    :valid       → Campos con valor válido
+    :invalid     → Campos con valor inválido
+
+    📌 Otros útiles:
+    :empty       → Elementos que no contienen hijos ni texto
+    :not(selector) → Excluye elementos que coinciden con el selector
+
+    =============================
+    🟣 PSEUDOELEMENTOS EN CSS
+    =============================
+
+    Los pseudoelementos comienzan con "::" (doble dos puntos). Permiten dar estilo a partes específicas de un elemento.
+
+    ::before         → Inserta contenido antes del contenido real del elemento
+    ::after          → Inserta contenido después del contenido real
+    ::first-line     → Afecta solo la primera línea de texto del elemento
+    ::first-letter   → Afecta solo la primera letra del elemento
+    ::selection      → Estilo del texto seleccionado por el usuario (limitado en propiedades)
+    ::placeholder    → Estilo del texto dentro de un <input> con placeholder (limitado en propiedades)
+
+    ➕ Nota: Algunos navegadores antiguos usan pseudoelementos con un solo ":" pero el estándar moderno recomienda "::".
+
+*/
+
+
+/* ======== PSEUDOCLASES ======== */
+
+/* :hover - cuando el mouse está encima */
+button:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* :focus - cuando un campo está activo */
+input:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+/* :visited y :link - para enlaces */
+a:link {
+    color: hotpink;
+}
+
+a:visited {
+    color: green;
+}
+
+/* ======== PSEUDOELEMENTOS ======== */
+
+/* ::first-line - aplica estilo solo a la primera línea del párrafo */
+.parrafo::first-line {
+    font-weight: bold;
+    color: darkblue;
+}
+
+/* ::before - inserta contenido antes del párrafo */
+.parrafo::before {
+    content: "→ ";
+    color: orange;
+}
+
+/* ::after - inserta contenido después del párrafo */
+.parrafo::after {
+    content: " ✔";
+    color: green;
+}

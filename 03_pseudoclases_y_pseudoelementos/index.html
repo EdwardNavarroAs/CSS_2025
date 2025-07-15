@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 03_pseudo_clases_elementos/index.html
+
+    Este archivo demuestra el uso de pseudoclases y pseudoelementos en CSS.
+    Las pseudoclases permiten aplicar estilos en función del estado de un elemento (por ejemplo, :hover, :focus).
+    Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento (por ejemplo, ::before, ::first-line).
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y Pseudoelementos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>03 - Pseudoclases y Pseudoelementos</h1>
+        <p>Explora cómo aplicar estilos a estados específicos o partes internas de un elemento usando pseudo-clases y pseudo-elementos.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Pseudoclases</h2>
+            <ul>
+                <li><a href="#">Enlace no visitado</a></li>
+                <li><a href="#" class="visited">Enlace visitado (simulado)</a></li>
+            </ul>
+            <input type="text" placeholder="Haz clic aquí para activar focus">
+            <button>Coloca el cursor encima de mí</button>
+        </section>
+
+        <section>
+            <h2>Pseudoelementos</h2>
+            <p class="parrafo">
+                Esta es una línea de texto de ejemplo. Vamos a resaltar la primera línea y añadir contenido antes y después.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de CSS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
