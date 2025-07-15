@@ -4,8 +4,8 @@
     Archivo: 03_pseudo_clases_elementos/index.html
 
     Este archivo demuestra el uso de pseudoclases y pseudoelementos en CSS.
-    Las pseudoclases permiten aplicar estilos en función del estado de un elemento (por ejemplo, :hover, :focus).
-    Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento (por ejemplo, ::before, ::first-line).
+    Las pseudoclases permiten aplicar estilos en función del estado de un elemento (:hover, :focus, :visited, etc.).
+    Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento (::before, ::after, ::first-line, etc.).
 -->
 <head>
     <meta charset="UTF-8">
@@ -17,26 +17,41 @@
 
     <header>
         <h1>03 - Pseudoclases y Pseudoelementos</h1>
-        <p>Explora cómo aplicar estilos a estados específicos o partes internas de un elemento usando pseudo-clases y pseudo-elementos.</p>
+        <p>Explora cómo aplicar estilos a estados específicos o partes internas de un elemento usando pseudoclases y pseudoelementos.</p>
     </header>
 
     <main>
+
         <section>
-            <h2>Pseudoclases</h2>
+            <h2>¿Qué son las pseudoclases?</h2>
+            <p>
+                Las <strong>pseudoclases</strong> son palabras clave precedidas por dos puntos (<code>:</code>) que se agregan a un selector 
+                para definir un estado especial del elemento. Por ejemplo, cuando el usuario pasa el mouse por encima, 
+                cuando un campo está enfocado, cuando un enlace fue visitado, etc.
+            </p>
+
             <ul>
                 <li><a href="#">Enlace no visitado</a></li>
                 <li><a href="#" class="visited">Enlace visitado (simulado)</a></li>
             </ul>
+
             <input type="text" placeholder="Haz clic aquí para activar focus">
             <button>Coloca el cursor encima de mí</button>
         </section>
 
         <section>
-            <h2>Pseudoelementos</h2>
+            <h2>¿Qué son los pseudoelementos?</h2>
+            <p>
+                Los <strong>pseudoelementos</strong> permiten aplicar estilos a una parte específica de un elemento, 
+                como la primera letra, la primera línea o para insertar contenido antes o después del texto.
+                Se escriben con dos puntos dobles (<code>::</code>).
+            </p>
+
             <p class="parrafo">
                 Esta es una línea de texto de ejemplo. Vamos a resaltar la primera línea y añadir contenido antes y después.
             </p>
         </section>
+
     </main>
 
     <footer>

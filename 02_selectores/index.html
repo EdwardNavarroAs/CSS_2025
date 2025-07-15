@@ -9,59 +9,62 @@
 -->
 <head>
     <meta charset="UTF-8">
-    <title>Selectores en CSS</title>
+    <title>02 - Selectores en CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
         <h1 class="titulo">Curso de CSS: Selectores</h1>
+        <p>Los <strong>selectores</strong> son las herramientas que usamos para indicar a qué elementos HTML queremos aplicar un estilo. Existen distintos tipos, desde los más simples como etiquetas, hasta avanzados como atributos o combinadores.</p>
     </header>
 
     <main>
 
         <section>
-            <h2>Selector de etiqueta</h2>
-            <p>Este párrafo será estilizado usando un selector de tipo etiqueta.</p>
+            <h2>1. Selector de etiqueta</h2>
+            <p>Este párrafo será estilizado usando un selector de tipo etiqueta (por ejemplo, <code>p</code>). Este tipo de selector aplica el mismo estilo a todos los elementos del mismo tipo.</p>
         </section>
 
         <section>
-            <h2 class="especial">Selector de clase</h2>
-            <p class="texto">Este párrafo usa un selector de clase llamado <code>texto</code>.</p>
+            <h2 class="especial">2. Selector de clase</h2>
+            <p class="texto">Este párrafo usa una clase llamada <code>texto</code>. Las clases se usan para aplicar estilos a múltiples elementos que comparten una misma categoría.</p>
         </section>
 
         <section>
-            <h2 id="identificador">Selector de ID</h2>
-            <p id="parrafo-id">Este párrafo está asociado a un ID único.</p>
+            <h2 id="identificador">3. Selector de ID</h2>
+            <p id="parrafo-id">Este párrafo tiene un ID único (<code>parrafo-id</code>). Los ID se usan para identificar y dar estilo a un único elemento en la página.</p>
         </section>
 
         <section>
-            <h2>Selectores de atributos</h2>
-            <a href="#">Enlace sin destino</a>
-            <a href="https://example.com">Enlace externo</a>
-            <img src="imagen.png" alt="Ejemplo">
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo">
+            <h2>4. Selectores de atributos</h2>
+            <p>Podemos aplicar estilos a elementos que tengan ciertos atributos, como <code>href</code>, <code>src</code> o <code>type</code>.</p>
+            <a href="#">Enlace sin destino (href="#")</a><br>
+            <a href="https://example.com">Enlace externo (href con URL)</a><br>
+            <img src="imagen.png" alt="Ejemplo de imagen con src"><br>
+            <input type="text" placeholder="Nombre"><br>
+            <input type="email" placeholder="Correo electrónico">
         </section>
 
         <section>
-            <h2>Relaciones entre elementos</h2>
+            <h2>5. Selectores por relaciones entre elementos</h2>
+            <p>Estos selectores permiten aplicar estilos según la posición de un elemento respecto a otro (por ejemplo, hijos directos, hermanos adyacentes o descendientes).</p>
             <div>
                 <h3>Subtítulo</h3>
-                <p>Este párrafo está dentro de un div.</p>
+                <p>Este párrafo está dentro de un <code>&lt;div&gt;</code>.</p>
                 <span>Un <span>span</span> dentro del div.</span>
             </div>
-            <p>Hermano general</p>
+            <p>Este párrafo puede ser estilizado como hermano de otros elementos.</p>
         </section>
 
         <section>
-            <h2>Anidamiento de reglas (CSS moderno)</h2>
-            <p>CSS moderno permite anidar selectores dentro de otros selectores para facilitar la escritura de reglas complejas.</p>
+            <h2>6. Selectores anidados (CSS moderno)</h2>
+            <p>En CSS moderno, especialmente con preprocesadores o soporte actual, podemos anidar reglas dentro de otras para construir selectores más complejos de forma más legible.</p>
 
             <article>
-                <h3>Un encabezado</h3>
-                <p>Yo soy un párrafo.</p>
-                <div>Yo soy un div</div>
+                <h3>Encabezado del artículo</h3>
+                <p>Yo soy un párrafo justo debajo de un <code>&lt;h3&gt;</code>.</p>
+                <div>Yo soy un <code>&lt;div&gt;</code></div>
                 <p>Yo soy otro párrafo.</p>
             </article>
         </section>
