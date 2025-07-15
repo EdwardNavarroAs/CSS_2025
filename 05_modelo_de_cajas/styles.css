@@ -1,0 +1,85 @@
+/*
+    Archivo: styles.css
+    Capítulo 04 - Modelo de Caja
+
+    Este archivo demuestra cómo funciona el modelo de caja en CSS.
+
+    📦 El modelo de caja estándar está compuesto por:
+    - Contenido
+    - Padding (relleno interno)
+    - Border (borde)
+    - Margin (margen externo)
+
+    🧠 box-sizing:
+    - content-box (valor por defecto): el ancho y alto aplican solo al contenido.
+      El padding y el borde se agregan encima.
+    - border-box: el ancho y alto incluyen el contenido, el padding y el borde.
+      Esto ayuda a evitar que la caja crezca inesperadamente.
+*/
+
+/* Estilo base */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #f4f4f4;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
+/* Sección 2: Visualización de caja */
+.caja-ejemplo {
+    background-color: #add8e6; /* Azul claro */
+    color: #000;
+    width: 200px;
+    padding: 20px;
+    border: 5px solid #000;
+    margin: 20px;
+}
+
+/*
+Explicación visual:
+- Ancho del contenido: 200px
+- Padding: 20px (en cada lado)
+- Borde: 5px (en cada lado)
+- Margen: 20px
+
+Tamaño total de la caja en content-box:
+    200px (contenido) + 40px (padding total) + 10px (borde total) = 250px de ancho real
+*/
+
+/* Sección 3: Comparación de box-sizing */
+.contenedor {
+    display: flex;
+    gap: 20px;
+}
+
+.caja {
+    background-color: lightgreen;
+    padding: 20px;
+    border: 5px solid green;
+    width: 200px;
+    /* Por defecto usa content-box */
+}
+
+.default-box {
+    box-sizing: content-box; /* ancho solo para el contenido */
+}
+
+.border-box {
+    box-sizing: border-box; /* el ancho incluye padding y borde */
+    background-color: lightcoral;
+}
+
+/*
+border-box evita que el tamaño se "desborde":
+- El ancho total sigue siendo 200px
+- padding + border se descuentan del área de contenido
+*/

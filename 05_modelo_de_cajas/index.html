@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: index.html
+    Capítulo 04 - Modelo de Caja en CSS
+
+    Este documento explica el modelo de caja en CSS, el cual define cómo se calcula
+    el tamaño y espacio de los elementos HTML en una página. Se muestran ejemplos
+    con padding, border, margin y box-sizing.
+
+    🧱 El modelo de caja define:
+    - Contenido (content)
+    - Relleno interno (padding)
+    - Borde (border)
+    - Margen externo (margin)
+
+    📦 La propiedad 'box-sizing' permite cambiar cómo se calcula el ancho/alto total:
+    - 'content-box' (por defecto): width solo aplica al contenido
+    - 'border-box': width incluye padding y border
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Modelo de Caja</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Modelo de Caja en CSS (Box Model)</h1>
+        <p>Aprende cómo los navegadores calculan el espacio que ocupa cada elemento.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. ¿Qué es el Modelo de Caja?</h2>
+            <p>En CSS, cada elemento se representa como una caja rectangular. El modelo de caja está compuesto por:</p>
+            <ul>
+                <li><strong>Contenido</strong> - El área donde aparece el texto o imagen.</li>
+                <li><strong>Relleno (padding)</strong> - Espacio entre el contenido y el borde.</li>
+                <li><strong>Borde (border)</strong> - Contorno del elemento.</li>
+                <li><strong>Margen (margin)</strong> - Espacio entre el elemento y otros elementos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Ejemplo visual de modelo de caja</h2>
+            <div class="caja-ejemplo">Caja de ejemplo</div>
+        </section>
+
+        <section>
+            <h2>3. box-sizing</h2>
+            <p>Por defecto, el tamaño (<code>width</code> y <code>height</code>) se aplica solo al contenido.
+                Con <code>box-sizing: border-box</code>, el tamaño incluye padding y borde, lo cual facilita el control del diseño.</p>
+            
+            <p><strong>Observa la diferencia entre las dos cajas:</strong></p>
+
+            <div class="contenedor">
+                <div class="caja default-box">Box-sizing: content-box (por defecto)</div>
+                <div class="caja border-box">Box-sizing: border-box</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de CSS. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
