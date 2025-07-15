@@ -1,0 +1,112 @@
+/*
+    Archivo: estilos.css
+    Capítulo 03 - Cascada, herencia y especificidad
+
+    Este archivo demuestra cómo el navegador decide qué estilos aplicar cuando hay múltiples reglas en conflicto.
+*/
+
+/* ===================== */
+/* === 1. CASCADA ====== */
+/* ===================== */
+
+/* Selector de etiqueta */
+p {
+    color: red;
+}
+
+/* Selector de clase (peso 10) */
+.mensaje {
+    color: green;
+}
+
+/* Selector de ID (peso 100 - gana) */
+#mensaje-especial {
+    color: blue;
+}
+
+/* ===================== */
+/* === 2. HERENCIA ===== */
+/* ===================== */
+
+/*
+HERENCIA EN CSS
+
+✅ Algunas propiedades se heredan automáticamente:
+   - color
+   - font-family
+   - font-size
+   - line-height
+   - text-align
+   - letter-spacing
+
+❌ Propiedades que NO se heredan:
+   - margin, padding, border
+   - width, height
+   - display, background, etc.
+
+Puedes forzar la herencia con la palabra clave: inherit;
+*/
+
+.contenedor {
+    color: purple;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor a {
+    color: inherit; /* Los enlaces no heredan color por defecto */
+}
+
+
+/* ============================= */
+/* === 3. ESPECIFICIDAD ========= */
+/* ============================= */
+
+.parrafo {
+    color: green; /* clase = peso 10 */
+}
+
+#parrafo {
+    color: cyan;  /* ID = peso 100 → gana sobre clase */
+}
+
+/* El siguiente estilo en línea en HTML: 
+   <p style="color: tomato;"> tiene un peso de 1000 y gana sobre todos los anteriores. */
+
+
+/* ============================== */
+/* === 4. CONFLICTOS & !IMPORTANT */
+/* ============================== */
+
+.conflicto {
+    color: green;
+}
+
+#conflicto {
+    color: blue;
+}
+
+/* Gana por tener !important, incluso sobre ID */
+#conflicto {
+    color: gold !important;
+}
+
+
+/* ===================== */
+/* === 5. HERENCIA EXTRA */
+/* ===================== */
+
+.padre {
+    color: teal;
+    font-family: Georgia, serif;
+    font-size: 18px;
+
+    /* Estas propiedades NO se heredan */
+    padding: 10px;
+    border: 2px dashed teal;
+}
+
+.padre-no-hereda {
+    border: 4px solid crimson;
+    padding: 20px;
+    background-color: lightyellow;
+}

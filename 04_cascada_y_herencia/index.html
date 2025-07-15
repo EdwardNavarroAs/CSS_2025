@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: index.html
+    Capítulo 03 - Cascada, herencia y especificidad en CSS
+
+    Este documento muestra cómo los navegadores determinan qué reglas de estilo aplicar
+    cuando existen múltiples reglas que compiten entre sí. Se explican los conceptos de:
+    - Cascada: El orden en que se aplican los estilos.
+    - Herencia: Cómo ciertos estilos se transmiten desde un elemento padre.
+    - Especificidad: Qué selector tiene más "peso" para ganar la competencia.
+-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03 - Cascada, Herencia y Especificidad</title>
+    <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+    <header>
+        <h1>Cascada, herencia y especificidad</h1>
+        <p>Comprende cómo el navegador decide qué estilos aplicar en caso de conflicto.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. ¿Qué es la cascada?</h2>
+            <p>
+                La <strong>cascada</strong> es el sistema que usa CSS para resolver qué regla aplicar cuando varias afectan al mismo elemento. 
+                Se basa en el origen del estilo, el orden en que aparecen y si hay conflictos entre reglas.
+            </p>
+            <p class="mensaje" id="mensaje-especial">
+                Este párrafo tiene un selector de etiqueta, clase e ID. Observa cuál tiene prioridad.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. ¿Qué es la herencia?</h2>
+            <p>
+                La <strong>herencia</strong> permite que algunos estilos como el color o la tipografía se transmitan desde un elemento padre a sus hijos.
+                Sin embargo, no todas las propiedades se heredan por defecto (por ejemplo, los márgenes o los bordes).
+            </p>
+            <div class="contenedor">
+                <p>Este párrafo hereda el color y la fuente del contenedor padre.</p>
+                <a href="#">Este enlace hereda el color usando <code>color: inherit;</code>.</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. ¿Qué es la especificidad?</h2>
+            <p>
+                La <strong>especificidad</strong> es una medida que determina qué regla tiene más peso cuando varias se aplican al mismo elemento.
+                Se calcula así:
+            </p>
+            <ul>
+                <li>Selector de etiqueta → peso = 1</li>
+                <li>Selector de clase o pseudoclase → peso = 10</li>
+                <li>Selector de ID → peso = 100</li>
+                <li>Estilo en línea → peso = 1000</li>
+                <li><code>!important</code> → sobrescribe todo</li>
+            </ul>
+
+            <p class="parrafo" id="parrafo">
+                ¿Qué color ves aquí? El ID tiene más peso que la clase o la etiqueta.
+            </p>
+
+            <p style="color: tomato;">
+                Este párrafo usa estilo <strong>en línea</strong>, que tiene el mayor peso.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Conflictos entre reglas</h2>
+            <p>
+                Cuando hay múltiples reglas con igual especificidad, se aplica la que esté más abajo. Pero si una regla usa <code>!important</code>,
+                ganará sobre cualquier otra, incluso sobre estilos en línea.
+            </p>
+            <p class="conflicto" id="conflicto">
+                Este párrafo tiene clase, ID y una regla con <code>!important</code>. Observa qué estilo se aplica.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Más sobre herencia</h2>
+            <p>
+                Aquí vemos qué propiedades sí se heredan (como color y fuente), y cuáles no (como bordes o márgenes).
+            </p>
+            <div class="padre">
+                <p>Este párrafo hereda el color y fuente del contenedor <code>.padre</code>.</p>
+                <div>
+                    <p>Incluso los elementos internos heredan esas propiedades.</p>
+                </div>
+            </div>
+
+            <div class="padre-no-hereda">
+                <p>
+                    Este párrafo <strong>no hereda</strong> propiedades como el borde o el relleno.
+                    Sólo hereda el color y la fuente.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de CSS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
