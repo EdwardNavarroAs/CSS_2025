@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- 
+    Archivo: 02_selectores.html
+
+    Este documento se usa para ilustrar los distintos tipos de selectores en CSS.
+    Los selectores permiten aplicar estilos a elementos HTML según su tipo, clase,
+    ID, atributos, posición en el DOM o estado. Son fundamentales en el diseño con CSS.
+-->
+<head>
+    <meta charset="UTF-8">
+    <title>Selectores en CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="titulo">Curso de CSS: Selectores</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Selector de etiqueta</h2>
+            <p>Este párrafo será estilizado usando un selector de tipo etiqueta.</p>
+        </section>
+
+        <section>
+            <h2 class="especial">Selector de clase</h2>
+            <p class="texto">Este párrafo usa un selector de clase llamado <code>texto</code>.</p>
+        </section>
+
+        <section>
+            <h2 id="identificador">Selector de ID</h2>
+            <p id="parrafo-id">Este párrafo está asociado a un ID único.</p>
+        </section>
+
+        <section>
+            <h2>Selectores de atributos</h2>
+            <a href="#">Enlace sin destino</a>
+            <a href="https://example.com">Enlace externo</a>
+            <img src="imagen.png" alt="Ejemplo">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo">
+        </section>
+
+        <section>
+            <h2>Relaciones entre elementos</h2>
+            <div>
+                <h3>Subtítulo</h3>
+                <p>Este párrafo está dentro de un div.</p>
+                <span>Un <span>span</span> dentro del div.</span>
+            </div>
+            <p>Hermano general</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso CSS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

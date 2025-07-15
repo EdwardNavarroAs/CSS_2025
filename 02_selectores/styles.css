@@ -1,0 +1,89 @@
+/* 
+    Archivo: 02_selectores.css
+
+    En CSS, un selector permite aplicar estilos a uno o varios elementos HTML.
+    Existen muchos tipos de selectores, y combinarlos permite un control preciso sobre el diseño visual.
+*/
+
+/* === SELECTORES BÁSICOS === */
+
+/* Selector de etiqueta: aplica estilos a todos los elementos <p> */
+p {
+    color: darkgreen;
+}
+
+/* Selector de clase: se refiere a cualquier elemento con class="texto" */
+.texto {
+    font-style: italic;
+    color: tomato;
+}
+
+/* Selector de ID: solo se aplica a un elemento con id="parrafo-id" */
+#parrafo-id {
+    background-color: lightgray;
+    padding: 0.5em;
+}
+
+/* Selector múltiple: aplica estilos a varios elementos al mismo tiempo */
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+
+/* Selector universal: selecciona todos los elementos del documento */
+* {
+    box-sizing: border-box;
+}
+
+/* === SELECTORES DE ATRIBUTO === */
+
+/* Aplica a cualquier elemento con el atributo href */
+[href] {
+    text-decoration: underline;
+}
+
+/* Aplica solo si el valor de href es exactamente "#" */
+[href="#"] {
+    color: red;
+}
+
+/* Empieza por un valor */
+[href^="https"] {
+    color: green;
+}
+
+/* Termina en un valor */
+[src$=".png"] {
+    border: 5px solid red;
+}
+
+/* Contiene el valor en cualquier parte */
+[href*="example"] {
+    background-color: yellow;
+}
+
+/* Aplica a cualquier input cuyo type sea "text" */
+input[type="text"] {
+    border: 2px dashed purple;
+}
+
+/* === SELECTORES DE RELACIÓN ENTRE ELEMENTOS === */
+
+/* Selector descendiente: aplica a los <span> dentro de un <div> */
+div span {
+    color: teal;
+}
+
+/* Selector hijo directo */
+div > span {
+    font-weight: bold;
+}
+
+/* Selector de hermano adyacente: aplica al párrafo justo después de un h3 */
+h3 + p {
+    color: navy;
+}
+
+/* Selector de hermanos generales: aplica a cualquier <p> debajo de un <div> */
+div ~ p {
+    color: crimson;
+}
