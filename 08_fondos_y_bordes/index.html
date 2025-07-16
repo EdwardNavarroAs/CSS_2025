@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: index.html
+    Tema 07 - Fondos y Bordes en CSS
+
+    En este archivo se ilustran las propiedades relacionadas con fondos y bordes,
+    incluyendo background-color, background-image, background-size, y propiedades de borde como border-radius.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondos y Bordes en CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>08 - Fondos y Bordes en CSS</h1>
+    <p>Explora cómo aplicar colores, imágenes y estilos de borde a los elementos.</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>1. Fondo con color</h2>
+        <div class="fondo-color">Caja con fondo de color.</div>
+    </section>
+
+    <section>
+        <h2>2. Fondo con imagen</h2>
+        <div class="fondo-imagen">Caja con imagen de fondo.</div>
+    </section>
+
+    <section>
+        <h2>3. Fondo con imagen ajustada</h2>
+        <div class="fondo-ajustado">Imagen ajustada con background-size.</div>
+    </section>
+
+    <section>
+        <h2>4. Bordes personalizados</h2>
+        <div class="borde-estilizado">Caja con bordes estilizados.</div>
+    </section>
+
+    <section>
+        <h2>5. Bordes redondeados</h2>
+        <div class="borde-redondo">Caja con border-radius.</div>
+    </section>
+
+    <section>
+        <h2>6. Fondos con degradados</h2>
+        <div class="fondo-degradado">Fondo con degradado lineal</div>
+    </section>
+
+    <section>
+        <h2>7. Múltiples fondos</h2>
+        <div class="fondo-multiple">Fondo con imagen y degradado juntos</div>
+    </section>
+
+    <section>
+        <h2>8. Imagen como borde (border-image)</h2>
+        <div class="borde-con-imagen">Caja con borde generado a partir de una imagen</div>
+    </section>
+
+    <section>
+        <h2>9. Manejo del desbordamiento (overflow)</h2>
+        
+        <div class="contenedor-overflow overflow-visible">
+            <p>
+                Este contenido usa <strong>overflow: visible</strong>. El texto puede desbordar el contenedor si es muy largo. Observa qué pasa al agregar más contenido al contenedor de tal forma que la única opción sea desbordarse.
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </p>
+        </div>
+
+        <div class="contenedor-overflow overflow-hidden">
+            <p>
+                Este contenido usa <strong>overflow: hidden</strong>. El texto que se sale se oculta completamente y no se puede ver.
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </p>
+        </div>
+
+
+        <div class="contenedor-overflow overflow-scroll">
+            <p>
+                Este contenido usa <strong>overflow: scroll</strong>. Siempre se muestra una barra de desplazamiento, sea necesaria o no.
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+
+        <div class="contenedor-overflow overflow-auto">
+            <p>
+                Este contenido usa <strong>overflow: auto</strong>. Solo aparece la barra de desplazamiento si el contenido realmente la necesita.
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 - Curso de CSS</p>
+</footer>
+
+</body>
+</html>

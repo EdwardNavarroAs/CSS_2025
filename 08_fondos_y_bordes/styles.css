@@ -1,0 +1,184 @@
+/*
+    Archivo: styles.css
+    Tema 07 - Fondos y Bordes
+
+    Este archivo muestra ejemplos de cómo usar:
+    - background-color, background-image, background-size, background-position
+    - border, border-style, border-color, border-radius
+*/
+
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 2em;
+}
+
+/* ====== 1. Fondo con color ====== */
+.fondo-color {
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* ====== 2. Fondo con imagen ====== */
+.fondo-imagen {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9HCXwTbNqx8X6h1gkiBjs6dh2OtqYY-takA&s');
+    height: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* ====== 3. Fondo ajustado ====== */
+.fondo-ajustado {
+    color: #ddd;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9HCXwTbNqx8X6h1gkiBjs6dh2OtqYY-takA&s');
+    background-size: cover; /* otras opciones: contain, auto, 100% */
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+/* ====== 4. Bordes personalizados ====== */
+.borde-estilizado {
+    border: 5px dashed darkblue;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+/* ====== 5. Bordes redondeados ====== */
+.borde-redondo {
+    border: 3px solid #555;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #e7ffe7;
+    margin-bottom: 20px;
+}
+
+/* ====== 6. Fondos con degradados ====== */
+.fondo-degradado {
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* De izquierda a derecha */
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/*
+🎨 También puedes usar:
+- radial-gradient(circle, color1, color2)
+- repeating-linear-gradient(...)
+*/
+
+/* ====== 7. Múltiples fondos ====== */
+.fondo-multiple {
+    background:
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9HCXwTbNqx8X6h1gkiBjs6dh2OtqYY-takA&s');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 150px;
+    border: 2px solid #aaa;
+}
+
+/*
+🧠 Explicación:
+- El primer fondo (degradado blanco semi-transparente) se coloca encima.
+- El segundo fondo es la imagen.
+- Puedes usar múltiples capas separadas por comas.
+- El orden de dibujo va de arriba (primer fondo) hacia atrás.
+*/
+
+/* ====== 8. Border-image ====== */
+.borde-con-imagen {
+    width: 300px;
+    padding: 1em;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    font-weight: bold;
+
+    border: 20px solid transparent;
+
+    /* Imagen usada como borde */
+    border-image-source: url('https://www.zooplus.es/magazine/wp-content/uploads/2018/04/fotolia_169457098.webp');
+    border-image-slice: 30;
+    border-image-repeat: round;
+
+    /*
+    Alternativamente, en shorthand:
+    border-image: url(...) 30 round;
+
+    🔍 Explicación:
+    - border-image-slice divide la imagen en 9 partes (como una cuadrícula).
+    - border-image-repeat puede ser 'stretch', 'repeat', 'round' o 'space'.
+    */
+}
+
+/* ====== 9. Manejo del desbordamiento ====== */
+
+.contenedor-overflow {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #555;
+    margin: 20px auto;
+    background-color: #fefefe;
+    overflow: visible; /* por defecto */
+}
+
+.overflow-visible {
+    overflow: visible;
+    background-color: #e0f7fa;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+    background-color: #fce4ec;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+    background-color: #fff3e0;
+}
+
+.overflow-auto {
+    overflow: auto;
+    background-color: #f1f8e9;
+}
+
+/*
+🧠 Explicación:
+- overflow: visible → el contenido sobresale del área.
+- overflow: hidden → se oculta el contenido fuera del área.
+- overflow: scroll → siempre muestra scroll, útil para forzar desplazamiento.
+- overflow: auto → scroll solo si es necesario.
+*/
+
+/* Si se quiere probar overflow-x o overflow-y por separado:
+    overflow-x: auto;
+    overflow-y: hidden;
+*/
+
+/*
+📚 Notas adicionales:
+- Puedes usar la propiedad shorthand `background` para combinar múltiples propiedades.
+  Ejemplo: background: url(...) no-repeat center/cover;
+
+- border-radius acepta valores por esquina (por ejemplo: 10px 20px 0 0)
+
+- También existen bordes más complejos como `border-image`, pero no se abordan en este nivel básico.
+*/
