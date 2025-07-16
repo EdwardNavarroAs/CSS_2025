@@ -69,9 +69,21 @@ Tamaño total de la caja en content-box:
     /* Por defecto usa content-box */
 }
 
+/*
+box-sizing: content-box (por defecto)
+- El ancho solo aplica al contenido
+- El padding y el border se suman al ancho total
+*/
+
 .default-box {
     box-sizing: content-box; /* ancho solo para el contenido */
 }
+
+/*
+box-sizing: border-box
+- El ancho incluye padding y border
+- El total no se ve afectado por ellos
+*/
 
 .border-box {
     box-sizing: border-box; /* el ancho incluye padding y borde */
@@ -82,4 +94,22 @@ Tamaño total de la caja en content-box:
 border-box evita que el tamaño se "desborde":
 - El ancho total sigue siendo 200px
 - padding + border se descuentan del área de contenido
+*/
+
+/* ======= Sección 4: Outline ======= */
+
+.boton-outline {
+    padding: 10px 20px;
+    border: 2px solid darkgreen;
+    outline: 4px dashed red;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0fff0;
+}
+
+/*
+Explicación:
+- El outline se dibuja por fuera del borde.
+- No ocupa espacio ni cambia el layout.
+- Se usa frecuentemente en accesibilidad (por ejemplo, al usar :focus).
 */
