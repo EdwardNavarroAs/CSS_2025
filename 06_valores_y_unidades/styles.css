@@ -1,0 +1,121 @@
+/*
+    Archivo: styles.css
+    Capítulo 05 - Valores y Unidades en CSS
+
+    Este archivo muestra ejemplos prácticos del uso de unidades de medida,
+    valores de color y palabras clave especiales como `inherit`, `initial`, y `unset`.
+
+    🧠 UNIDADES EN CSS:
+    - Absolutas: px, cm, mm, in (no cambian con el contexto).
+    - Relativas:
+        - em: relativa al font-size del elemento padre.
+        - rem: relativa al font-size del <html>.
+        - %: relativa al tamaño del elemento contenedor.
+        - vw: 1% del ancho del viewport.
+        - vh: 1% del alto del viewport.
+
+    🎨 COLORES:
+    - Por nombre (blue), por valor hexadecimal (#e91e63),
+      por RGB (rgb()), por HSL (hsl()).
+
+    💡 VALORES ESPECIALES:
+    - inherit: hereda del elemento padre.
+    - initial: restablece al valor predeterminado del navegador.
+    - unset: combina ambos comportamientos dependiendo de la propiedad.
+*/
+
+/* ====== Estilos generales ====== */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
+/* ====== Unidades de medida ====== */
+
+/* Unidad absoluta */
+.absoluta {
+    font-size: 16px; /* fijo, no cambia según el contexto */
+}
+
+/* Unidad relativa a font-size del padre */
+.relativa-em {
+    font-size: 1.5em; /* 1.5 veces el tamaño de fuente del padre */
+}
+
+/* Unidad relativa a la raíz (html) */
+.relativa-rem {
+    font-size: 2rem; /* 2 veces el font-size del <html> (normalmente 16px) */
+}
+
+/* Unidad relativa al ancho del viewport */
+.relativa-vw {
+    font-size: 3vw; /* 3% del ancho de la pantalla */
+}
+
+/* Unidad relativa al elemento contenedor */
+.relativa-porcentaje {
+    width: 50%; /* Mitad del ancho del contenedor padre */
+    background-color: #e0f7fa;
+    padding: 0.5em;
+    border: 1px solid #0097a7;
+}
+
+/* ====== Colores ====== */
+
+.colores {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+
+.color-nombre {
+    color: blue; /* nombre predefinido */
+}
+
+.color-hex {
+    color: #e91e63; /* hexadecimal */
+}
+
+.color-rgb {
+    color: rgb(255, 165, 0); /* naranja */
+}
+
+.color-hsl {
+    color: hsl(120, 100%, 40%); /* verde oscuro */
+}
+
+/* ====== Valores especiales ====== */
+
+/* Estilo padre para probar inherit */
+.especiales {
+    color: teal;
+    font-family: Georgia, serif;
+}
+
+.heredado {
+    color: inherit; /* toma el color del padre (.especiales) */
+}
+
+.inicial {
+    color: initial; /* vuelve al color predeterminado (normalmente negro) */
+}
+
+.reiniciado {
+    color: unset; /* hereda si se puede, o resetea si no */
+}

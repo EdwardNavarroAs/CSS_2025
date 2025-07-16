@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: index.html
+    Capítulo 05 - Valores y Unidades en CSS
+
+    Este documento explica las distintas unidades de medida y valores que se pueden usar en CSS.
+
+    🔹 Unidades de medida:
+        - Absolutas (px, cm, mm, in): No dependen del contexto. Son fijas.
+        - Relativas (em, rem, %, vw, vh): Dependen del contexto o del tamaño del viewport.
+
+    🔹 Colores:
+        - Se pueden definir por nombre, valor hexadecimal, RGB o HSL.
+
+    🔹 Valores especiales:
+        - inherit: hereda el valor del elemento padre.
+        - initial: restablece al valor por defecto del navegador.
+        - unset: hereda si es heredable, o inicializa si no lo es.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - Valores y Unidades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Valores y Unidades en CSS</h1>
+        <p>Explora las diferentes formas de expresar tamaños, colores y valores en las propiedades de CSS.</p>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>1. Unidades de medida</h2>
+            <p>Las unidades determinan el tamaño de elementos y se dividen en:</p>
+            <ul>
+                <li><strong>Absolutas:</strong> píxeles (<code>px</code>), centímetros (<code>cm</code>), pulgadas (<code>in</code>)…</li>
+                <li><strong>Relativas:</strong> em, rem, %, vw, vh... (dependen del contexto)</li>
+            </ul>
+
+            <div class="unidades">
+                <p class="absoluta">
+                    📏 <strong>16px</strong>: Unidad absoluta. Siempre mide lo mismo sin importar el entorno.
+                </p>
+
+                <p class="relativa-em">
+                    🔄 <strong>1.5em</strong>: Relativa al tamaño de la fuente del elemento padre.
+                </p>
+
+                <p class="relativa-rem">
+                    🧱 <strong>2rem</strong>: Relativa al tamaño de fuente raíz del documento (por defecto suele ser 16px).
+                </p>
+
+                <p class="relativa-vw">
+                    📐 <strong>3vw</strong>: Relativa al ancho del viewport (pantalla visible).
+                </p>
+
+                <p class="relativa-porcentaje">
+                    📊 <strong>50%</strong>: Relativa al ancho del contenedor padre.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Colores en CSS</h2>
+            <p>CSS permite definir colores de múltiples formas:</p>
+            <ul>
+                <li><code>blue</code>: nombre predefinido</li>
+                <li><code>#e91e63</code>: valor hexadecimal</li>
+                <li><code>rgb(255, 165, 0)</code>: mezcla de rojo, verde y azul</li>
+                <li><code>hsl(120, 100%, 40%)</code>: tono, saturación y luminosidad</li>
+            </ul>
+
+            <ul class="colores">
+                <li class="color-nombre">🟦 Nombre: blue</li>
+                <li class="color-hex">💖 Hex: #e91e63</li>
+                <li class="color-rgb">🧡 RGB: rgb(255, 165, 0)</li>
+                <li class="color-hsl">💚 HSL: hsl(120, 100%, 40%)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Valores especiales</h2>
+            <p>Algunas palabras clave pueden usarse como valores:</p>
+            <ul>
+                <li><strong>inherit:</strong> hereda el valor del padre</li>
+                <li><strong>initial:</strong> restablece al valor por defecto</li>
+                <li><strong>unset:</strong> hereda o restablece según la propiedad</li>
+            </ul>
+
+            <div class="especiales">
+                <p class="heredado">🧬 Este texto usa <code>inherit</code> para tomar el color del contenedor.</p>
+                <p class="inicial">♻️ Este texto usa <code>initial</code> para volver al valor por defecto.</p>
+                <p class="reiniciado">🔄 Este texto usa <code>unset</code> para comportarse dinámicamente.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Curso de CSS. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -5,6 +5,27 @@
     Este archivo demuestra cómo el navegador decide qué estilos aplicar cuando hay múltiples reglas en conflicto.
 */
 
+
+/* ====== Estilos generales ====== */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
+
 /* ===================== */
 /* === 1. CASCADA ====== */
 /* ===================== */

@@ -5,6 +5,25 @@
     Existen muchos tipos de selectores, y combinarlos permite un control preciso sobre el diseño visual.
 */
 
+/* ====== Estilos generales ====== */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
 /* === SELECTORES BÁSICOS === */
 
 /* Selector de etiqueta: aplica estilos a todos los elementos <p> */

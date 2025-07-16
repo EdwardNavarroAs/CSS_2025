@@ -34,7 +34,9 @@ main {
     padding: 2em;
 }
 
-/* Sección 2: Visualización de caja */
+/* ===================== */
+/* 🔷 Sección 2: Visualización de caja */
+/* ===================== */
 .caja-ejemplo {
     background-color: #add8e6; /* Azul claro */
     color: #000;
@@ -51,11 +53,13 @@ Explicación visual:
 - Borde: 5px (en cada lado)
 - Margen: 20px
 
-Tamaño total de la caja en content-box:
+📏 Tamaño total de la caja en content-box:
     200px (contenido) + 40px (padding total) + 10px (borde total) = 250px de ancho real
 */
 
-/* Sección 3: Comparación de box-sizing */
+/* ===================== */
+/* 🧱 Sección 3: Comparación de box-sizing */
+/* ===================== */
 .contenedor {
     display: flex;
     gap: 20px;
@@ -66,38 +70,38 @@ Tamaño total de la caja en content-box:
     padding: 20px;
     border: 5px solid green;
     width: 200px;
-    /* Por defecto usa content-box */
 }
 
 /*
-box-sizing: content-box (por defecto)
+📐 box-sizing: content-box (por defecto)
 - El ancho solo aplica al contenido
 - El padding y el border se suman al ancho total
 */
 
 .default-box {
-    box-sizing: content-box; /* ancho solo para el contenido */
+    box-sizing: content-box;
 }
 
 /*
-box-sizing: border-box
+📐 box-sizing: border-box
 - El ancho incluye padding y border
 - El total no se ve afectado por ellos
 */
 
 .border-box {
-    box-sizing: border-box; /* el ancho incluye padding y borde */
+    box-sizing: border-box;
     background-color: lightcoral;
 }
 
 /*
-border-box evita que el tamaño se "desborde":
+🎯 border-box evita que el tamaño se "desborde":
 - El ancho total sigue siendo 200px
 - padding + border se descuentan del área de contenido
 */
 
-/* ======= Sección 4: Outline ======= */
-
+/* ===================== */
+/* 🔶 Sección 4: Outline */
+/* ===================== */
 .boton-outline {
     padding: 10px 20px;
     border: 2px solid darkgreen;
@@ -108,8 +112,37 @@ border-box evita que el tamaño se "desborde":
 }
 
 /*
-Explicación:
+🟥 Explicación:
 - El outline se dibuja por fuera del borde.
 - No ocupa espacio ni cambia el layout.
-- Se usa frecuentemente en accesibilidad (por ejemplo, al usar :focus).
+- Es útil para mostrar el foco en accesibilidad (:focus).
 */
+
+/* ============================= */
+/* ✏️ Propiedades individuales y shorthand */
+/* ============================= */
+
+/*
+✅ Propiedades como padding, margin y border se pueden escribir:
+
+🟩 Forma larga:
+  padding-top, padding-right, padding-bottom, padding-left
+  margin-top, margin-right, etc.
+  border-top-width, border-left-style, etc.
+
+🟨 Forma abreviada (shorthand):
+  1 valor:    aplica a los 4 lados → padding: 10px;
+  2 valores:  vertical | horizontal → padding: 10px 20px;
+  3 valores:  top | sides | bottom → padding: 10px 15px 20px;
+  4 valores:  top | right | bottom | left → padding: 5px 10px 15px 20px;
+
+Ejemplo:
+  border: 2px dashed crimson;
+*/
+
+/* Ejemplo visual para reforzar */
+.shorthand-ejemplo {
+    margin: 10px 20px 30px 40px;
+    padding: 15px 10px;
+    border: 3px dotted orange;
+}
