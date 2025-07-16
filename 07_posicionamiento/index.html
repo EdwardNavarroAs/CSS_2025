@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: 06_posicionamiento/index.html
+
+    Este archivo muestra los diferentes valores de la propiedad CSS `position`:
+    - static (valor por defecto)
+    - relative
+    - absolute
+    - fixed
+    - sticky
+
+    También se explican:
+    - El uso de top, left, right, bottom
+    - El stacking context y la propiedad z-index
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Posicionamiento en CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Posicionamiento en CSS</h1>
+        <p>Aprende a ubicar elementos en la página usando diferentes técnicas.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. position: static (por defecto)</h2>
+            <div class="caja static">Caja con posición estática</div>
+        </section>
+
+        <section>
+            <h2>2. position: relative</h2>
+            <div class="caja relative">Caja relativa (desplazada desde su posición original)</div>
+        </section>
+
+        <section>
+            <h2>3. position: absolute</h2>
+            <div class="contenedor-abs">
+                <div class="caja absolute">Caja absoluta (se posiciona respecto al contenedor)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. position: fixed</h2>
+            <div class="caja fixed">Caja fija (permanece en la pantalla al hacer scroll)</div>
+        </section>
+
+        <section>
+            <h2>5. position: sticky</h2>
+            <p class="sticky">Este párrafo es sticky. Se queda "pegado" al llegar al borde superior al hacer scroll.</p>
+            <div style="height: 800px;"></div>
+        </section>
+
+        <section>
+            <h2>6. Superposición con z-index</h2>
+            <div class="caja zindex1">Z-index: 1</div>
+            <div class="caja zindex10">Z-index: 10</div>
+        </section>
+    </main>
+
+</body>
+</html>

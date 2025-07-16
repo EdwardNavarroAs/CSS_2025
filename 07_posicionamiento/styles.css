@@ -1,0 +1,106 @@
+/*
+Archivo: styles.css
+Capítulo 06 - Posicionamiento
+
+Explica los distintos valores de la propiedad `position` en CSS:
+- static
+- relative
+- absolute
+- fixed
+- sticky
+Y cómo controlar la superposición con z-index.
+*/
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 4em;
+}
+
+.caja {
+    background-color: lightblue;
+    padding: 1em;
+    border: 2px solid blue;
+    width: 250px;
+    margin: 1em 0;
+}
+
+/* 1. static: valor por defecto, no se puede mover con top/left */
+.static {
+    position: static;
+}
+
+/* 2. relative: se posiciona relativa a su lugar original */
+.relative {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: lightgreen;
+}
+
+/* 3. absolute: se posiciona respecto al ancestro más cercano con position distinta a static */
+.contenedor-abs {
+    position: relative;
+    height: 200px;
+    border: 2px dashed gray;
+}
+.absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: lightcoral;
+}
+
+/* 4. fixed: se mantiene en la misma posición en la pantalla aunque se haga scroll */
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: gold;
+    z-index: 1000;
+}
+
+/* 5. sticky: cambia de static a fixed según el scroll */
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: orange;
+    padding: 1em;
+    border: 2px solid darkorange;
+}
+
+/* 6. z-index: controla el orden en el eje Z (superposición)
+
+🧠 Cuanto mayor sea el valor de z-index, más "arriba" se verá el elemento.
+
+✅ Regla importante:
+- El elemento con mayor z-index **aparece encima** de los que tienen menor z-index.
+
+📌 Para que z-index funcione:
+- El elemento debe tener position distinto de `static` (por ejemplo: relative, absolute, fixed, sticky)
+*/
+
+.zindex1 {
+    position: relative;
+    top: -50px;
+    left: 20px;
+    background-color: violet;
+    z-index: 1;
+}
+
+.zindex10 {
+    position: relative;
+    top: -100px;
+    left: 60px;
+    background-color: skyblue;
+    z-index: 10; /* Este se muestra ENCIMA del anterior por tener mayor z-index */
+}
+
