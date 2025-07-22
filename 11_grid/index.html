@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 07 - CSS Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Capítulo 07 - CSS Grid</h1>
+
+    <section>
+        <h2>1️⃣ Activar Grid y definir columnas</h2>
+        <p>
+        Usamos <code>display: grid</code> en el contenedor para activar el modelo Grid.
+        Luego, con <code>grid-template-columns</code> definimos cuántas columnas queremos.
+        </p>
+        <div class="grid-activada">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2️⃣ Espaciado entre filas y columnas (gap)</h2>
+        <p>
+        Podemos usar la propiedad <code>gap</code> para añadir espacio entre las celdas. También se puede usar <code>row-gap</code> y <code>column-gap</code> por separado.
+        </p>
+        <div class="grid-gap">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>3️⃣ Definir filas explícitas</h2>
+        <p>
+        También podemos definir cuántas filas queremos y su altura usando <code>grid-template-rows</code>.
+        </p>
+        <div class="grid-filas">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>4️⃣ Posicionar elementos con líneas</h2>
+        <p>
+        Podemos colocar ítems exactamente donde queremos usando <code>grid-column</code> y <code>grid-row</code>, especificando líneas de inicio y fin.
+        </p>
+        <div class="grid-lineas">
+        <div class="item a">A (col 1-3)</div>
+        <div class="item b">B (row 2-4)</div>
+        <div class="item c">C</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>5️⃣ Definir áreas con nombres</h2>
+        <p>
+        Usamos <code>grid-template-areas</code> para crear una cuadrícula con nombres y luego asignamos cada ítem a una de esas áreas.
+        </p>
+        <div class="grid-areas">
+        <div class="item header">Encabezado</div>
+        <div class="item sidebar">Menú</div>
+        <div class="item main">Contenido</div>
+        <div class="item footer">Pie</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>6️⃣ Grid anidado y subgrid</h2>
+        <p>
+            Podemos crear una cuadrícula dentro de otra añadiendo <code>display: grid</code> a un elemento hijo. También existe <code>subgrid</code>, que hereda las líneas del grid padre (no siempre soportado).
+        </p>
+
+        <div class="grid-nested">
+            <div class="item">1</div>
+
+            <div class="item nested-grid">
+            <div class="nested-item">A</div>
+            <div class="nested-item">B</div>
+            <div class="nested-item">C</div>
+            </div>
+
+            <div class="item">3</div>
+        </div>
+    </section>
+
+</body>
+</html>
