@@ -1,0 +1,103 @@
+/*
+    Archivo: styles.css
+    Tema 09 - Imágenes, medios y formularios en CSS
+
+    Se aplican estilos a imágenes, elementos multimedia (video/audio) y formularios.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 1em;
+}
+
+main {
+    padding: 2em;
+}
+
+/* ==== 1. Estilos para imágenes ==== */
+
+.imagen-normal {
+    width: 300px;
+    border: 3px solid #555;
+    margin-bottom: 20px;
+}
+
+.imagen-redonda {
+    width: 300px;
+    border-radius: 50%; /* Hace la imagen circular si es cuadrada */
+    border: 3px solid #555;
+    margin-bottom: 20px;
+}
+
+.imagen-responsiva {
+    max-width: 100%;
+    height: auto; /* Mantiene proporciones */
+    border: 3px solid #555;
+    margin-bottom: 20px;
+}
+
+/* ==== 2. Estilos para video ==== */
+
+.video-responsivo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* ==== 3. Estilos para formularios ==== */
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #0077ff;
+    outline: none;
+}
+
+.formulario button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: #005dcc;
+}

@@ -1,0 +1,205 @@
+/* Archivo: styles.css — Capítulo 06 - Flexbox */
+
+/* Reset básico de márgenes y fuente */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background: #fafafa;
+}
+h1, h2 {
+  text-align: center;
+}
+section {
+  margin-bottom: 2rem;
+}
+
+/* Estilo del contenedor flex */
+.contenedor {
+  display: flex;               /* Activamos flexbox */
+  border: 2px dashed #999;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+/* Estilo base para los ítems */
+.item {
+  background: #4caf50;
+  color: #fff;
+  padding: 25px;
+  margin: 5px;
+  text-align: center;
+  flex-shrink: 0;              /* No se encogen si el espacio es pequeño */
+}
+
+/* 1. Dirección de los ítems dentro del contenedor */
+.fila {
+  flex-direction: row;         /* Horizontal (por defecto) */
+}
+.columna {
+  flex-direction: column;      /* Vertical */
+  height: 200px;               /* Se requiere altura para visualizar la columna*/
+}
+
+/* 2. Distribución horizontal */
+.centro {
+  justify-content: center;     /* Centra los ítems en el eje horizontal */
+}
+.espaciado {
+  justify-content: space-between; /* Espacia al máximo */
+}
+.fin {
+  justify-content: flex-end;   /* Alinea a la derecha */
+}
+
+/* 3. Alineación vertical y contenido */
+.centrado {
+  align-items: center;         /* Centra verticalmente cada ítem */
+}
+.con-wrap {
+  flex-wrap: wrap;             /* Permite que los ítems pasen a otra fila */
+}
+.con-wrap.align-content-ejemplo {
+  align-content: space-around; /* Alinea las filas entre sí */
+}
+
+/* 4. wrap: los ítems saltan a una nueva línea */
+.wrap {
+  flex-wrap: wrap;
+}
+.wrap .item {
+  width: 100px;                /* Se fuerza un ancho para ver cómo se rompen en varias filas */
+}
+
+/* Flex-grow, flex-shrink y flex-basis por separado para más claridad */
+
+/* 
+  Este ítem puede crecer para ocupar el espacio disponible (1 parte).
+  Puede encogerse si el espacio no es suficiente.
+  Su tamaño inicial preferido es automático (calculado por el contenido).
+*/
+.flex-grow-1 {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+/* 
+  Este ítem puede crecer el doble que el anterior (2 partes).
+  También puede encogerse si es necesario.
+  El tamaño base también es automático.
+*/
+.flex-grow-2 {
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+/* 
+  Este ítem no puede crecer (flex-grow: 0).
+  Puede encogerse si el espacio es limitado.
+  Su tamaño base inicial es de 100px.
+*/
+.flex-basis-100 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 100px;
+}
+
+/* 6. Order: reordenar visualmente */
+.ordenado .item:nth-child(1) { order: 3; }
+.ordenado .item:nth-child(2) { order: 1; }
+.ordenado .item:nth-child(3) { order: 2; }
+
+/* Contenedor base con align-items general */
+.align-items-center {
+  align-items: center; /* Aplica a todos por defecto */
+}
+
+/* Ejemplos individuales con align-self */
+.align-start {
+  align-self: flex-start;   /* Alineado arriba */
+}
+.align-end {
+  align-self: flex-end;     /* Alineado abajo */
+}
+.align-stretch {
+  align-self: stretch;      /* Se estira para ocupar todo el alto */
+}
+.align-baseline {
+  align-self: baseline;     /* Alineado con la línea base del texto */
+}
+
+/* Contenedor principal en fila (anidado) */
+.flexbox-principal-fila {
+  display: flex;                  /* Activa flexbox */
+  flex-direction: row;            /* Dirección horizontal */
+  justify-content: center;        /* Centra los ítems en el eje horizontal */
+  gap: 10px;                      /* Espacio entre elementos */
+  padding: 10px;
+  background-color: #e6f0ff;
+  border: 2px solid #4a90e2;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+/* Elementos directos dentro del contenedor principal */
+.elemento-flex-principal {
+  background-color: #c2e0ff;
+  padding: 10px 15px;
+  border: 1px solid #4a90e2;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Contenedor anidado (columna) */
+.contenedor-flex-anidado {
+  display: flex;                  /* También es flex */
+  flex-direction: column;         /* Dirección vertical */
+  gap: 6px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border: 2px dashed #999;
+  border-radius: 4px;
+}
+
+/* Elementos internos dentro del contenedor anidado */
+.elemento-flex-anidado {
+  background-color: #dcdcdc;
+  padding: 6px 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* 7. Align-self: Alineación individual sobre el eje cruzado (vertical por defecto) */
+
+.contenedor-align-self {
+  display: flex;               /* Activamos Flexbox */
+  flex-direction: row;         /* Dirección horizontal */
+  align-items: center;         /* Alineación general al centro */
+  height: 150px;               /* Altura necesaria para visualizar el alineamiento vertical */
+  border: 2px solid #b39ddb;
+  background-color: #ede7f6;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+
+.item-self {
+  background-color: #7e57c2;
+  color: white;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+/* Alineación individual por ítem */
+.self-inicio {
+  align-self: flex-start;      /* Se alinea arriba */
+}
+.self-centro {
+  align-self: center;          /* Se alinea al centro */
+}
+.self-fin {
+  align-self: flex-end;        /* Se alinea abajo */
+}

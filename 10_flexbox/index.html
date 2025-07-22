@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Capítulo 06 - Flexbox en CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>🧭 Capítulo 06 - Flexbox</h1>
+    <p>
+        Flexbox (Flexible Box Layout) es una técnica de diseño en CSS que nos permite alinear y distribuir espacio entre elementos de manera eficiente,
+        especialmente cuando el tamaño de los elementos es dinámico o desconocido.
+        Funciona en una sola dimensión: podemos organizar elementos en filas (<strong>row</strong>) o en columnas (<strong>column</strong>), pero no en ambas al mismo tiempo.
+    </p>
+
+    <!-- Sección 1: Dirección de los elementos -->
+    <section>
+        <h2>📐 Dirección de los elementos</h2>
+        <p>
+            Una de las primeras propiedades que usamos con Flexbox es <code>flex-direction</code>, que define si los elementos se colocarán en fila (horizontal) o en columna (vertical).
+        </p>
+
+        <h3>➡️ Dirección: fila (row)</h3>
+        <p>
+            Esta es la dirección por defecto. Los elementos hijos se colocan uno al lado del otro, de izquierda a derecha.
+        </p>
+        <div class="contenedor fila">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+        </div>
+
+        <h3>⬇️ Dirección: columna (column)</h3>
+        <p>
+            Cuando usamos <code>flex-direction: column</code>, los elementos se apilan de arriba hacia abajo.
+            Es útil cuando queremos listas verticales con control total del espacio.
+        </p>
+        <div class="contenedor columna">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Justify Content -->
+    <section>
+        <h2>↔️ Justify Content (Alineación horizontal)</h2>
+        <p>
+            <code>justify-content</code> se utiliza para controlar cómo se distribuyen los elementos dentro del eje principal (horizontal si usamos <code>row</code>).
+        </p>
+
+        <h3>🎯 Centrado</h3>
+        <p>Los elementos se colocan en el centro del contenedor.</p>
+        <div class="contenedor fila centro">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+
+        <h3>📏 Space-between</h3>
+        <p>Los elementos se separan uniformemente, dejando espacio solo entre ellos, no al borde del contenedor.</p>
+        <div class="contenedor fila espaciado">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Align Items -->
+    <section>
+        <h2>↕️ Align Items (Alineación vertical)</h2>
+        <p>
+            <code>align-items</code> alinea los elementos en el eje cruzado (vertical si usamos <code>row</code>).
+        </p>
+
+        <h3>🔘 Center</h3>
+        <p>Los elementos se alinean verticalmente al centro del contenedor.</p>
+        <div class="contenedor fila centrado">
+            <div class="item">A</div>
+            <div class="item" style="height: 100px;">B (más alto)</div>
+            <div class="item">C</div>
+        </div>
+
+        <h3>📐 Stretch</h3>
+        <p>Los elementos se estiran automáticamente para ocupar todo el alto del contenedor (si no se les da una altura).</p>
+        <div class="contenedor fila estirado">
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Flex-wrap -->
+    <section>
+        <h2>🔁 Flex-wrap (salto de línea)</h2>
+        <p>
+            Por defecto, los elementos flex intentan mantenerse en una sola línea, pero con <code>flex-wrap: wrap</code>, permitimos que pasen a otra línea si no caben.
+        </p>
+        <div class="contenedor fila wrap">
+            <div class="item">Uno</div>
+            <div class="item">Dos</div>
+            <div class="item">Tres</div>
+            <div class="item">Cuatro</div>
+            <div class="item">Cinco</div>
+            <div class="item">Seis</div>
+            <div class="item">Siete</div>
+            <div class="item">Ocho</div>
+            <div class="item">Nueve</div>
+        </div>
+    </section>
+
+    <!-- Sección 5: flex-grow, flex-shrink y flex-basis -->
+    <section>
+    <h2>📏 flex-grow, flex-shrink y flex-basis (control granular)</h2>
+
+    <p>
+        Estos tres valores controlan cómo se comportan los ítems dentro de un contenedor flexible:
+    </p>
+    <ul>
+        <li><code>flex-grow</code>: qué tanto puede crecer el ítem cuando hay espacio disponible.</li>
+        <li><code>flex-shrink</code>: qué tanto puede encogerse el ítem cuando no hay suficiente espacio.</li>
+        <li><code>flex-basis</code>: el tamaño inicial preferido del ítem antes de aplicar <code>grow</code> o <code>shrink</code>.</li>
+    </ul>
+
+    <p>
+        En el siguiente ejemplo, el primer ítem puede crecer 1 parte, el segundo 2 partes, y el tercero tiene un tamaño base de 100px pero no crecerá:
+    </p>
+
+    <div class="contenedor fila">
+        <div class="item flex-grow-1">1<br>(grow: 1)</div>
+        <div class="item flex-grow-2">2<br>(grow: 2)</div>
+        <div class="item flex-basis-100">3<br>(basis: 100px)</div>
+    </div>
+    </section>
+
+    <!-- Sección 6: Order -->
+    <section>
+        <h2>🔢 Orden de los elementos</h2>
+        <p>
+            Con la propiedad <code>order</code>, podemos modificar visualmente el orden de los elementos sin alterar el HTML.
+        </p>
+        <div class="contenedor fila ordenado">
+            <div class="item">1 (orden: 3)</div>
+            <div class="item">2 (orden: 1)</div>
+            <div class="item">3 (orden: 2)</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🎯 Alineación individual con <code>align-self</code></h2>
+        <p>
+            Mientras que <code>align-items</code> alinea todos los elementos en el eje cruzado (vertical si usamos <code>flex-direction: row</code>), 
+            <code>align-self</code> permite que un ítem se alinee individualmente, sobrescribiendo el valor general.
+        </p>
+        <p>
+            En este ejemplo, todos los elementos están dentro de un contenedor con <code>align-items: center</code>,
+            pero cada uno tiene su propia alineación individual usando <code>align-self</code>.
+        </p>
+        <div class="contenedor fila align-items-center altura-demostrativa">
+            <div class="item">Default</div>
+            <div class="item align-start">Start</div>
+            <div class="item align-end">End</div>
+            <div class="item align-stretch">Stretch</div>
+            <div class="item align-baseline">Baseline<br><small style="font-size: 10px;">(texto más pequeño)</small></div>
+        </div>
+    </section>
+
+    <!-- Sección 7: Flexbox Anidadas -->
+    <section>
+        <h2>📦 Flexbox Anidadas</h2>
+        <p>
+            Puedes tener contenedores flexibles dentro de otros. Esto permite crear diseños más complejos, como una fila que contiene una columna de elementos.
+        </p>
+        <p>
+            En este ejemplo, el contenedor principal usa <code>flex-direction: row</code>, mientras que uno de sus elementos internos también es un contenedor flex con <code>flex-direction: column</code>.
+        </p>
+
+        <!-- Contenedor principal en fila -->
+        <div class="flexbox-principal-fila">
+            
+            <!-- Elemento normal -->
+            <div class="elemento-flex-principal">A</div>
+
+            <!-- Contenedor interno (flex en columna) -->
+            <div class="contenedor-flex-anidado">
+            <div class="elemento-flex-anidado">B1</div>
+            <div class="elemento-flex-anidado">B2</div>
+            <div class="elemento-flex-anidado">B3</div>
+            </div>
+
+            <!-- Otro elemento normal -->
+            <div class="elemento-flex-principal">C</div>
+        </div>
+    </section>
+
+</body>
+</html>

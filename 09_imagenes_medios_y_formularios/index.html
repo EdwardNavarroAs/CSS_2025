@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--
+    Archivo: index.html
+    Tema 09 - Imágenes, medios y formularios en CSS
+
+    Este documento muestra cómo aplicar estilos a imágenes, elementos multimedia y formularios usando CSS.
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes, medios y formularios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>09 - Imágenes, medios y formularios en CSS</h1>
+    <p>Aprende a estilizar imágenes, videos y formularios para crear interfaces más limpias y accesibles.</p>
+</header>
+
+<main>
+
+    <!-- Sección 1: Imágenes -->
+    <section>
+        <h2>1. Estilos para imágenes</h2>
+        <img src="https://i.pinimg.com/236x/49/6c/9d/496c9d566862735ef8b75caeb8042703.jpg" alt="Gatito" class="imagen-normal">
+        <img src="https://wallpapers.com/images/featured/imagenes-de-gatitos-hjlx7wqz73ofa0ss.jpg" alt="Gatito redondo" class="imagen-redonda">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPLAetJ06I_OuAb0tWPpX1v_AZEx-wrJkkuaVbHks5iydSNR5mZ6x6QkWReec4qcmuTgk&usqp=CAU" alt="Gatito responsivo" class="imagen-responsiva">
+    </section>
+
+    <!-- Sección 2: Videos -->
+    <section>
+        <h2>2. Estilos para video</h2>
+        <video class="video-responsivo" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento <code>video</code>.
+        </video>
+    </section>
+
+    <!-- Sección 3: Formularios -->
+    <section>
+        <h2>3. Estilizando formularios</h2>
+        <form class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+            <label for="email">Correo:</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 - Curso CSS</p>
+</footer>
+
+</body>
+</html>
