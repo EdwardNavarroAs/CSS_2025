@@ -1,0 +1,62 @@
+/* === VARIABLES: MODO CLARO POR DEFECTO === */
+:root {
+  --color-fondo: #ffffff;
+  --color-texto: #111111;
+  --color-acento: #007acc;
+  --borde: #dddddd;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --fuente: 'Segoe UI', sans-serif;
+}
+
+/* === MODO OSCURO AUTOMÁTICO === */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #1e1e1e;
+    --color-texto: #f5f5f5;
+    --color-acento: #3399ff;
+    --borde: #333;
+    --sombra: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* === ESTILOS GENERALES === */
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+/* === ENCABEZADO === */
+header {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-acento);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* === SECCIÓN PRINCIPAL === */
+.contenido {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.caja {
+  border: 2px solid var(--borde);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px var(--sombra);
+  background-color: var(--color-fondo);
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: gray;
+  font-size: 0.9rem;
+}

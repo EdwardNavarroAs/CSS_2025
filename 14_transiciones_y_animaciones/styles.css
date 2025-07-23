@@ -1,4 +1,6 @@
-/* Estilos base */
+/* -------------------------------------
+  Estilos base generales del documento
+-------------------------------------- */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -6,12 +8,13 @@ body {
   background-color: #f4f4f4;
   text-align: center;
 }
+
 h1 {
   margin-bottom: 2rem;
   color: #333;
 }
 
-/* Contenedor para mostrar las cajas una debajo de otra con espacio */
+/* Contenedor vertical para las cajas */
 .contenedor {
   display: flex;
   flex-direction: column;
@@ -20,7 +23,7 @@ h1 {
   margin: 0 auto;
 }
 
-/* Estilo base de cada caja */
+/* Estilo base de todas las cajas */
 .caja {
   background-color: #6c63ff;
   color: white;
@@ -29,22 +32,41 @@ h1 {
   cursor: pointer;
   font-size: 1.2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+  /* Transición por defecto para suavizar cualquier cambio */
   transition: all 0.3s ease-in-out;
 }
 
-/* Ejemplo 1: Transición suave de color y movimiento */
+/* -------------------------------------
+  Ejemplo 1: Transición en hover
+--------------------------------------
+  Las transiciones aplican un cambio suave en color y posición
+  al pasar el cursor sobre el elemento.
+*/
 .transicion:hover {
   background-color: #ff6c63;
   transform: translateY(-5px);
 }
 
-/* Ejemplo 2: Transformación en hover (rotación y escala) */
+/* -------------------------------------
+  Ejemplo 2: Transformación en hover
+--------------------------------------
+  Aquí aplicamos una transformación con escala y rotación.
+  Las transformaciones permiten modificar visualmente un
+  elemento (tamaño, rotación, posición) sin afectar su flujo.
+*/
 .transformacion:hover {
   transform: scale(1.1) rotate(-5deg);
   background-color: #00b894;
 }
 
-/* Ejemplo 3: Animación usando @keyframes para generar un pulso */
+/* -------------------------------------
+  Ejemplo 3: Animación de pulso con @keyframes
+--------------------------------------
+  Las animaciones definen un conjunto de estados en el tiempo.
+  Aquí, el elemento se agranda y vuelve a su tamaño original
+  repetidamente, creando un efecto de "latido".
+*/
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
@@ -53,7 +75,12 @@ h1 {
   animation: pulse 1.5s infinite;
 }
 
-/* Ejemplo 4: Entrada animada desde la izquierda */
+/* -------------------------------------
+  Ejemplo 4: Entrada animada desde la izquierda
+--------------------------------------
+  Esta animación mueve el elemento desde fuera de la pantalla
+  hasta su posición original, simulando una entrada suave.
+*/
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
@@ -68,7 +95,12 @@ h1 {
   animation: slideIn 1s ease-out;
 }
 
-/* Ejemplo 5: Rebote infinito */
+/* -------------------------------------
+  Ejemplo 5: Rebote infinito
+--------------------------------------
+  Simula un pequeño rebote vertical en bucle, útil para
+  atraer la atención hacia un elemento.
+*/
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);

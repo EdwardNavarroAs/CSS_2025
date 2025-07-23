@@ -1,0 +1,64 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+p {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #444;
+}
+
+/* Contenedor de las cajas */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilo base de cada caja */
+.caja {
+  background-color: #0984e3;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Transformación: Translate (trasladar o mover el elemento) */
+.translate:hover {
+  transform: translateX(50px); /* mueve la caja 50px a la derecha */
+}
+
+/* Transformación: Scale (escalar o cambiar el tamaño) */
+.scale:hover {
+  transform: scale(1.3); /* agranda la caja al 130% */
+}
+
+/* Transformación: Rotate (rotar en sentido horario) */
+.rotate:hover {
+  transform: rotate(20deg); /* rota la caja 20 grados */
+}
+
+/* Transformación: Skew (inclinar en eje X o Y) */
+.skew:hover {
+  transform: skewX(20deg); /* inclina la caja 20 grados horizontalmente */
+}
+
+/* Combinación de transformaciones: translate + scale + rotate */
+.combo:hover {
+  transform: translateY(-10px) scale(1.1) rotate(-10deg);
+}
