@@ -1,0 +1,48 @@
+/*
+📘 Uso de Variables en Sass (SCSS)
+──────────────────────────────────
+
+Importamos variables desde otro archivo usando @use o @import.
+Recomendamos `@use` ya que es la forma moderna de hacerlo.
+*/
+
+// ✅ Importar el archivo de variables (sin guion bajo ni extensión)
+@use 'variables';
+
+/*
+Nota: Para acceder a las variables desde @use necesitamos anteponer
+el nombre del módulo (archivo) seguido de un punto.
+
+Ejemplo:
+  variables.$color-primario
+*/
+
+// 🧱 Estilos base usando variables
+body {
+  font-family: variables.$fuente-base;
+  background-color: variables.$color-fondo;
+  color: variables.$color-texto;
+  padding: variables.$espaciado-m;
+}
+
+h1 {
+  color: variables.$color-primario;
+}
+
+p {
+  margin-top: variables.$espaciado-s;
+  margin-bottom: variables.$espaciado-s;
+}
+
+button {
+  background-color: variables.$color-secundario;
+  padding: variables.$espaciado-s;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+
+  &:hover {
+    background-color: #e1a73f; // alternativa ajustada manualmente
+  }
+}

@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/* 
+📘 Introducción a Sass (SCSS)
+──────────────────────────────
+
+🎯 ¿Qué es Sass?
+Sass (Syntactically Awesome Stylesheets) es un preprocesador de CSS, 
+lo que significa que amplía las capacidades de CSS puro. Nos permite 
+escribir código más limpio, mantenible y escalable.
+
+💡 Sass no reemplaza a CSS, sino que lo mejora.
+
+🔠 ¿Qué es SCSS?
+SCSS (Sassy CSS) es una de las dos sintaxis disponibles para Sass.
+La otra sintaxis se llama simplemente "Sass" (sin llaves ni punto y coma).
+
+SCSS se parece mucho al CSS tradicional, pero con superpoderes como:
+
+✔️ Variables
+✔️ Anidamiento de reglas
+✔️ Mixins y funciones reutilizables
+✔️ Operaciones matemáticas
+✔️ Importaciones de otros archivos
+✔️ Control de flujo (if, for, each...)
+
+✅ Ventajas de usar Sass:
+- Mejor organización del código
+- Facilita la reutilización de estilos
+- Ahorra tiempo en proyectos grandes
+- Hace más fácil mantener y escalar hojas de estilo
+- Permite usar lógica dentro del CSS
+
+Nota: Antes de poder usar Sass en un navegador, debe ser compilado a CSS.
+*/
+/* 
+🎨 VARIABLES EN SCSS
+────────────────────
+Las variables permiten almacenar valores como colores, tamaños o fuentes,
+que luego podemos reutilizar en varias partes del código.
+*/
+/* 
+🌐 ESTILOS GENERALES
+────────────────────
+Aplicamos estilos básicos al body, utilizando variables para mantener consistencia.
+*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 2rem;
+}
+
+/* 
+📝 TÍTULO PRINCIPAL
+───────────────────
+Usamos una variable para definir el color del título h1.
+Esto permite cambiarlo fácilmente desde un solo lugar.
+*/
+h1 {
+  color: #6c5ce7;
+}
+
+/* 
+🔘 ESTILOS DEL BOTÓN
+────────────────────
+El botón reutiliza variables para color y espaciado.
+También añadimos estilos visuales como borde redondeado y efecto hover.
+*/
+button {
+  background-color: #00b894;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #019170;
+}
+
+/*# sourceMappingURL=styles.css.map */

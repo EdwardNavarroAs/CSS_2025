@@ -1,0 +1,25 @@
+/*
+📦 ARCHIVO DE VARIABLES EN SASS
+───────────────────────────────
+
+Este archivo contiene todas las variables globales que se usarán
+en los estilos del proyecto. 
+
+Separar las variables en un archivo independiente permite
+una mejor organización, especialmente en proyectos grandes.
+*/
+
+// 🎨 Paleta de colores
+$color-primario: #0984e3;     // Azul principal
+$color-secundario: #fdcb6e;   // Amarillo pastel
+$color-fondo: #f5f6fa;        // Fondo general
+$color-texto: #2d3436;        // Gris oscuro
+
+// 🔠 Tipografía
+$fuente-base: 'Segoe UI', sans-serif;
+
+// 📏 Espaciado
+$espaciado-xs: 0.5rem;
+$espaciado-s: 1rem;
+$espaciado-m: 2rem;
+$espaciado-l: 4rem;
