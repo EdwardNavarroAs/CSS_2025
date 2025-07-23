@@ -43,6 +43,33 @@ que luego podemos reutilizar en varias partes del código.
 ────────────────────
 Aplicamos estilos básicos al body, utilizando variables para mantener consistencia.
 */
+
+/*
+🛠️ ¿Cómo compilar archivos SCSS a CSS?
+
+Para usar SCSS en un proyecto, necesitas compilarlo a CSS utilizando Sass.
+Aquí te mostramos cómo hacerlo:
+
+1️⃣ Instala Sass (si aún no lo tienes):
+   npm install -g sass
+
+2️⃣ Compila tu archivo SCSS con el siguiente comando:
+   sass scss/styles.scss css/styles.css
+
+   Esto tomará el archivo `styles.scss` ubicado en la carpeta `scss/`
+   y generará el archivo `styles.css` dentro de la carpeta `css/`.
+
+3️⃣ Compilación automática (modo watch):
+   sass --watch scss/styles.scss:css/styles.css
+
+   Este comando observa los cambios en tiempo real y recompila automáticamente.
+
+📦 Resultado:
+- Un archivo `.css` listo para usar en tu HTML.
+- Un archivo `.css.map` que sirve para depurar en el navegador (opcional).
+
+*/
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
