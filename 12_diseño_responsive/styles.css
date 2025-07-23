@@ -1,0 +1,109 @@
+/* Tema 08 - Diseño Web Responsive */
+
+/* Establecemos box-sizing universal */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Estilos base */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Tipografía fluida */
+  background: #fdfdfd;
+}
+
+/* Encabezado y pie de página */
+header, footer {
+  background: #3f3f3f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Navegación responsive */
+.responsive-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  background: #c0392b;
+}
+
+.responsive-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+  /* Transición suave cuando cambia el color de fondo (por ejemplo al hacer hover)
+     Equivale a:
+     transition-property: background;
+     transition-duration: 0.3s;
+     transition-timing-function: ease;
+     transition-delay: 0s;
+  */
+  transition: background 0.3s ease;
+}
+
+.responsive-nav a:hover {
+  background: #a93226;
+}
+
+/* Layout base: mobile first - todo en columna */
+main.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.content,
+.sidebar,
+.footer {
+  margin-bottom: 1rem;
+}
+
+/* Imágenes fluidas (aunque no hay imágenes en este ejemplo, es una buena práctica general) */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query: a partir de 600px, usamos grid para dos columnas */
+@media (min-width: 600px) {
+  main.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+
+  .footer {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Media query: a partir de 900px, pasamos a 3 columnas */
+@media (min-width: 900px) {
+  main.container {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .sidebar {
+    order: 3; /* Podemos reordenar elementos si lo deseamos */
+  }
+}
+
+/* Media query opcional para pantallas pequeñas (<400px) */
+@media (max-width: 400px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .responsive-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

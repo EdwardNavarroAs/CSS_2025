@@ -136,3 +136,13 @@ article {
         font-style: italic;
     }
 }
+
+/* === SELECTORES COMBINADOS === */
+/* Este tipo de selector aplica estilos a un elemento solo si cumple dos condiciones:
+   ser de cierto tipo (etiqueta) y tener una clase específica */
+/* Selector combinado: aplica solo si el elemento <main> tiene class="container" */
+main.container {
+    border: 2px dashed steelblue;
+    background-color: #eef6ff;
+    padding: 1em;
+}
