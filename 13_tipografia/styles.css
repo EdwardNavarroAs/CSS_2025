@@ -1,0 +1,41 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  padding: 2rem;
+  background: #f9f9f9;
+}
+
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Fuente secundaria para sección elegante */
+.elegante {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+}
+
+/* Propiedades tipográficas adicionales */
+.espaciado {
+  line-height: 4;
+  letter-spacing: 0.05em;
+  word-spacing: 0.2em;
+}
