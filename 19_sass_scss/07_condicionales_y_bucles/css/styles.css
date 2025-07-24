@@ -1,0 +1,47 @@
+.mensaje {
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: red;
+}
+
+.cajas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.caja-1 {
+  width: 100px;
+  height: 100px;
+  background-color: #3333ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.caja-2 {
+  width: 100px;
+  height: 100px;
+  background-color: #6666ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.caja-3 {
+  width: 100px;
+  height: 100px;
+  background-color: #9999ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map */

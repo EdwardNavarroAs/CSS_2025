@@ -1,0 +1,18 @@
+// 🧠 Uso de @if, @else if y @else en Sass
+$estado: "error"; // Cambia entre: "exito", "advertencia", "error"
+
+.mensaje {
+  padding: 1rem;
+  border-radius: 5px;
+  color: white;
+
+  @if $estado == "exito" {
+    background-color: green;
+  } @else if $estado == "advertencia" {
+    background-color: orange;
+  } @else if $estado == "error" {
+    background-color: red;
+  } @else {
+    background-color: gray;
+  }
+}

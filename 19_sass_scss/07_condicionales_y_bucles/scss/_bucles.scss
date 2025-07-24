@@ -1,0 +1,21 @@
+@use 'sass:color';
+
+// 🔁 Uso de @for para crear múltiples clases dinámicamente
+.cajas {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@for $i from 1 through 3 {
+  .caja-#{$i} {
+    width: 100px;
+    height: 100px;
+    background-color: color.adjust(blue, $lightness: $i * 10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+}
