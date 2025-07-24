@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* 
+  Funciones personalizadas con @function
+  --------------------------------------
+  Podemos definir funciones propias en Sass para reutilizar cálculos complejos o comunes,
+  como convertir píxeles a rems o calcular proporciones.
+*/
+/* 
+  Aplicamos la función personalizada px-a-rem 
+  para definir padding y tamaño de fuente en rems,
+  mejorando la escalabilidad y accesibilidad del diseño.
+*/
+.caja {
+  padding: 2rem;
+  font-size: 1.125rem;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  margin: 1rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

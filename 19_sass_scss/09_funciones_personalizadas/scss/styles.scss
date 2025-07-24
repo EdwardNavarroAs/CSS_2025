@@ -1,0 +1,15 @@
+@use "functions";
+
+/* 
+  Aplicamos la función personalizada px-a-rem 
+  para definir padding y tamaño de fuente en rems,
+  mejorando la escalabilidad y accesibilidad del diseño.
+*/
+
+.caja {
+  padding: functions.px-a-rem(32); // 2rem
+  font-size: functions.px-a-rem(18); // 1.125rem
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  margin: functions.px-a-rem(16); // 1rem
+}

@@ -1,0 +1,13 @@
+@use "sass:math";
+
+/* 
+  Funciones personalizadas con @function
+  --------------------------------------
+  Podemos definir funciones propias en Sass para reutilizar cálculos complejos o comunes,
+  como convertir píxeles a rems o calcular proporciones.
+*/
+
+// 💡 Función para convertir px a rem (basado en 16px como tamaño base)
+@function px-a-rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
