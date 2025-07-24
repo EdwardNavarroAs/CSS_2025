@@ -1,0 +1,72 @@
+/*
+🔗 Anidamiento en SCSS
+
+El anidamiento permite escribir selectores dentro de otros,
+siguiendo la estructura del HTML. Es útil para evitar repetir
+el nombre del contenedor principal y mantener el código más limpio.
+
+⚠️ Se recomienda no abusar del anidamiento profundo para evitar
+código difícil de mantener.
+*/
+
+@use 'sass:color';
+
+$color-fondo: #fff;
+$color-texto: #2d3436;
+$color-header: #6c5ce7;
+$color-boton: #00cec9;
+
+body {
+  font-family: sans-serif;
+  background-color: $color-fondo;
+  color: $color-texto;
+
+  header {
+    background-color: $color-header;
+    padding: 1rem;
+    color: white;
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    padding: 2rem;
+
+    button {
+      background-color: $color-boton;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: color.adjust($color-boton, $lightness: -10%);
+      }
+    }
+  }
+}
