@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@extend y Placeholders en Sass</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    Explicación:
+    En este ejemplo usamos %placeholders para crear un estilo base reutilizable con @extend.
+    Así evitamos duplicar reglas CSS comunes como padding, bordes y color.
+  -->
+
+  <h1>Ejemplo de @extend y %placeholders</h1>
+
+  <button class="btn-principal">Aceptar</button>
+  <button class="btn-alerta">Cancelar</button>
+</body>
+</html>

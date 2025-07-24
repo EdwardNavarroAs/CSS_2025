@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* 
+  %placeholders y @extend:
+  %nombre: define un conjunto de reglas reutilizables que no generan CSS hasta que se usan.
+  @extend %nombre: permite a una clase "heredar" ese conjunto de reglas.
+*/
+/* 🔵 Placeholder base */
+.btn-alerta, .btn-principal {
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* 🟩 Botón principal */
+.btn-principal {
+  background-color: green;
+}
+
+/* 🟥 Botón de alerta */
+.btn-alerta {
+  background-color: red;
+}
+
+/*# sourceMappingURL=styles.css.map */
