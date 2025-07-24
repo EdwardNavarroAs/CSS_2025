@@ -1,0 +1,29 @@
+// 🧩 styles.scss
+// Importamos funciones desde el archivo parcial y aplicamos los estilos.
+
+// 1️⃣ Importar el archivo de funciones
+@use 'functions';
+
+// 2️⃣ Estilos generales para las cajas de demostración
+.caja {
+  padding: 1rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+// 3️⃣ Aplicar colores manipulados
+.caja-base {
+  background-color: functions.$color-base;
+}
+
+.caja-clara {
+  background-color: functions.$color-claro;
+  color: #2d3436;
+}
+
+.caja-oscura {
+  background-color: functions.$color-oscuro;
+}

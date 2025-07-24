@@ -1,0 +1,12 @@
+// 🔧 _functions.scss
+// Este archivo define variables y utiliza funciones modernas del módulo `color` para manipular colores.
+
+// 📦 Importamos el módulo color explícitamente
+@use 'sass:color';
+
+// 🎨 Color base para usar en todas las cajas
+$color-base: #0984e3;
+
+// ⚙️ Generar tonalidades derivadas usando funciones modernas
+$color-claro: color.adjust($color-base, $lightness: 20%);  // Aclarar color base
+$color-oscuro: color.adjust($color-base, $lightness: -15%); // Oscurecer color base
