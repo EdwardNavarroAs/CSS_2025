@@ -1,0 +1,19 @@
+// 🧩 styles.scss
+// Este archivo importa los mixins y define estilos específicos para botones.
+
+// 1️⃣ Importar mixins desde el archivo parcial
+@use 'mixins';
+
+// 2️⃣ Aplicar el mixin a clases específicas
+
+.btn-primario {
+  @include mixins.boton-estilo(#6c5ce7); // Morado
+}
+
+.btn-secundario {
+  @include mixins.boton-estilo(#00b894); // Verde agua
+}
+
+.btn-alerta {
+  @include mixins.boton-estilo(#d63031, yellow); // Fondo rojo, texto amarillo
+}
