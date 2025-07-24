@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../scss/_reset.scss","../scss/_boton.scss","../scss/_variables.scss","../scss/_card.scss"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;;ACCF;EACE,kBCHY;EDIZ;EACA,SCHU;EDIV;EACA;EACA;EACA;;AAEA;EACE;;;AEVJ;EACE,kBDFW;ECGX;EACA,YDHU;ECIV;EACA;;AAEA;EACE,ODXa;ECYb;;AAGF;EACE;EACA","file":"styles.css"}

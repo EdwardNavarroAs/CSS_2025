@@ -1,0 +1,23 @@
+// 🧱 _card.scss
+// Estilos para la tarjeta de contenido.
+
+@use 'variables' as v;
+@use 'sass:math';
+
+.card {
+  background-color: v.$color-card;
+  padding: v.$espaciado * 2;
+  margin-top: v.$espaciado;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+  h2 {
+    color: v.$color-primario;
+    margin-bottom: math.div(v.$espaciado, 2);
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #333;
+  }
+}

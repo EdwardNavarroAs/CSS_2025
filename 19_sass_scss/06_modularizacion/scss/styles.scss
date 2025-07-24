@@ -1,0 +1,7 @@
+// 📦 styles.scss
+// Archivo principal que importa todos los módulos con @use.
+
+@use 'reset';
+@use 'variables';
+@use 'boton';
+@use 'card';

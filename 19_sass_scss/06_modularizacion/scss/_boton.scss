@@ -1,0 +1,19 @@
+// 🔘 _boton.scss
+// Estilos específicos para los botones.
+
+@use 'variables' as v;
+@use 'sass:color';
+
+.btn {
+  background-color: v.$color-boton;
+  color: white;
+  padding: v.$espaciado;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: color.adjust(v.$color-boton, $lightness: -10%);
+  }
+}
